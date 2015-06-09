@@ -2,14 +2,18 @@ package app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan("app")// same as @Configuration @EnableAutoConfiguration @ComponentScan
+//@ComponentScan("app")
 public class Application {
 
     public static void main(String[] args) throws Exception{
-        SpringApplication.run(Application.class, args);
+
+//        SpringApplication.run(Application.class, args);
+
+        SpringApplication app = new SpringApplication(Application.class);
+        app.setShowBanner(false);
+        app.run(args);
     }
 
 }

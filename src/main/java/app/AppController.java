@@ -6,11 +6,17 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @EnableAutoConfiguration
+@SpringBootApplication
 public class AppController {
 
     @RequestMapping("/")
-    String home() {
-        return "Hello World!";
+    User home() {
+        User user = new User();
+        user.setName("Naneen");
+        user.setLastname("SKE");
+        user.setAddress("Bangkok 10200");
+
+        return user;
     }
 
 //    public static void main(String[] args) throws Exception {
